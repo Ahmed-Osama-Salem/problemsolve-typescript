@@ -1,15 +1,13 @@
+/* eslint-disable prettier/prettier */
 function removeElement(nums: number[], val: number): number {
-  const k = nums.filter(n => {
-    if (n !== val) {
-      console.log(n);
-      return n.toFixed();
-    } else {
-      return 0;
+  let k = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      nums[k++] = nums[i];
     }
-  });
-  console.log(k, 'result');
-  console.log(k.length, 'result');
-  return k.length as number;
+  }
+
+  return k;
 }
 
 removeElement([3, 2, 2, 3], 3);

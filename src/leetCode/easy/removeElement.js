@@ -1,16 +1,12 @@
 function removeElement(nums, val) {
-    var k = nums.filter(function (n) {
-        if (n !== val) {
-            console.log(n);
-            return n.toFixed();
+    var k = 0;
+    for (var i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+            console.log(nums[k++], 'k++');
+            nums[k++] = nums[i];
         }
-        else {
-            return 0;
-        }
-    });
-    console.log(k, 'result');
-    console.log(k.length, 'result');
-    return k.length;
+    }
+    return k;
 }
 removeElement([3, 2, 2, 3], 3);
 console.log('##########################');
