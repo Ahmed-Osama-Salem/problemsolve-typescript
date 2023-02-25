@@ -5,7 +5,8 @@ function plusOne(digits: number[]): number[] {
   for (let i = 0; i < digits.length; i++) {
     digtStr += digits[i];
   }
-  const digtNum = Math.round(parseFloat(digtStr) + 1);
+  // eslint-disable-next-line node/no-unsupported-features/es-builtins
+  const digtNum = BigInt(digtStr) + BigInt(1);
   const strArray = digtNum.toString().split('');
 
   for (let j = 0; j < strArray.length; j++) {
