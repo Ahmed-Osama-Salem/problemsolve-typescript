@@ -10,7 +10,7 @@ function isPalindrome(s) {
         }
     }
     var lowerStr = cleanStr.toLowerCase();
-    var revStr = lowerStr.split('').reverse();
+    var revStr = lowerStr.split('');
     var newStr = revStr.join('').trim();
     console.log(lowerStr);
     console.log(newStr);
